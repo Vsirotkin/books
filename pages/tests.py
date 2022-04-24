@@ -10,3 +10,7 @@ class HomepageTestCase(SimpleTestCase):
     def test_homepage_url_name(self):
         response = self.client.get(reverse('home'))
         self.assertEqual(200, response.status_code)
+
+    def test_homepage_template_name(self):
+        response = self.client.get('/')
+        self.assertTemplateUsed(response, 'home.html')
