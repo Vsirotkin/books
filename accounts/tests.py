@@ -17,17 +17,17 @@ class CustomUserTest(TestCase):
         self.assertFalse(user.is_staff)
         self.assertFalse(user.is_superuser)
 
-        def test_create_superuser(self):
-            User = get_user_model()
+    def test_create_superuser(self):
+        User = get_user_model()
 
-            admin_user = User.objects.create_superuser(
-                username = 'superadmin',
-                email = 'superadmin@email.local',
-                password = 'admin_user',
-            )
+        admin_user = User.objects.create_superuser(
+            username = 'superadmin',
+            email = 'superadmin@email.local',
+            password = 'admin_user',
+        )
 
-            self.assertEqual(admin_user.username, 'superadmin')
-            self.assertEqual(admin_user.email, 'superadmin@email.local')
-            self.assertTrue(admin_user.is_active)
-            self.assertTrue(admin_user.is_staff)
-            self.assertTrue(admin_user.is_superuser)
+        self.assertEqual(admin_user.username, 'superadmin')
+        self.assertEqual(admin_user.email, 'superadmin@email.local')
+        self.assertTrue(admin_user.is_active)
+        self.assertTrue(admin_user.is_staff)
+        self.assertTrue(admin_user.is_superuser)
