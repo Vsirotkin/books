@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('pages.urls')), # main landing page
     path('admin/', admin.site.urls),
+    path('accounts/', include(django.contrib.auth.urls)), #login, logout
+    path('', include('pages.urls')), # main landing page
+    
 ]
