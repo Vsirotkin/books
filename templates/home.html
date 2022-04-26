@@ -16,6 +16,13 @@
     {% else %}
     <p>Welcome, new user. Please log in.</p>
         <a href="{% url 'login' %}">Log In</a>
+    <hr>    
+    <p>Welcome, no account. Please sign up.</p>`
+        <a href="{% url 'signup' %}">Sign Up</a>
     {% endif %}
+
+    
+
+    
         
 {% endblock content %}
