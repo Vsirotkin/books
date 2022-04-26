@@ -136,3 +136,4 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # redirection arter loggen in
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
