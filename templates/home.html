@@ -14,10 +14,10 @@
         <a href="{% url 'logout' %}">Log Out</a>
     </p>
     {% else %}
-    <p>Welcome, new user. Please log in.</p>
+    <p>Welcome, User. Please log in.</p>
         <a href="{% url 'login' %}">Log In</a>
     <hr>    
-    <p>Welcome, newcomer. No account? Please sign up.</p>`
+    <p>Welcome, Newcomer. Please sign up.</p>`
         <a href="{% url 'signup' %}">Sign Up</a>
     {% endif %}
 
