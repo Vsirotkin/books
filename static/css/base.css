@@ -1,3 +1,8 @@
 h1 { 
-    color: red
+    color: rgb(218, 45, 45)
+}
+
+.bookcover {
+    height: 300px;
+    width: auto;
 }
